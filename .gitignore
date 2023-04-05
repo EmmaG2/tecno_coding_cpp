@@ -1,2 +1,5 @@
 src/2016/*.out
 src/2017/*.out
+src/cses/*.out
+
+.vscode
