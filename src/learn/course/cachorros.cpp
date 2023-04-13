@@ -29,27 +29,8 @@ int main()
 {
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
-
-	si  set1;
-	vi  numeros;
-	int n;
-
-	cin >> n;
-
-	while (n-- > 0)
-	{
-		int t;
-		cin >> t;
-		numeros.pb(t);
-	}
-
-	cout << '{' << " ";
-	for (auto i = numeros.begin(); i < numeros.end(); i++)
-	{
-		cout << *i << ", ";
-	}
-
-	cout << '}' << ln;
-
+	int c, p, h;
+	cin >> c >> p >> h;
+	cout << p + (c - p) % (h + 1) << ln;
 	return 0;
 }

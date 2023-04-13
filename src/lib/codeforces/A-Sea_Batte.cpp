@@ -30,26 +30,11 @@ int main()
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 
-	si  set1;
-	vi  numeros;
-	int n;
+	int w1, h1, w2, h2;
 
-	cin >> n;
+	cin >> w1 >> h1 >> w2 >> h2;
 
-	while (n-- > 0)
-	{
-		int t;
-		cin >> t;
-		numeros.pb(t);
-	}
-
-	cout << '{' << " ";
-	for (auto i = numeros.begin(); i < numeros.end(); i++)
-	{
-		cout << *i << ", ";
-	}
-
-	cout << '}' << ln;
+	cout << 2 * (w1 + h1 + h2) + 4 << ln;
 
 	return 0;
 }

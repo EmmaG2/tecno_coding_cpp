@@ -30,26 +30,17 @@ int main()
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 
-	si  set1;
-	vi  numeros;
-	int n;
+	float r;
 
-	cin >> n;
+	cin >> r;
 
-	while (n-- > 0)
-	{
-		int t;
-		cin >> t;
-		numeros.pb(t);
-	}
+	float second = r + 5;
+	float third  = second * second;
+	float forth  = third / (r / 3);
+	float five   = forth * forth * forth;
+	// https://io.google/2023/puzzle/
 
-	cout << '{' << " ";
-	for (auto i = numeros.begin(); i < numeros.end(); i++)
-	{
-		cout << *i << ", ";
-	}
-
-	cout << '}' << ln;
+	cout << r << " " << second << " " << third << " " << forth << " " << five << ln;
 
 	return 0;
 }

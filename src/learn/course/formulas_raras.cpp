@@ -30,26 +30,10 @@ int main()
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 
-	si  set1;
-	vi  numeros;
-	int n;
+	float x, y, z;
+	cin >> x >> y >> z;
 
-	cin >> n;
-
-	while (n-- > 0)
-	{
-		int t;
-		cin >> t;
-		numeros.pb(t);
-	}
-
-	cout << '{' << " ";
-	for (auto i = numeros.begin(); i < numeros.end(); i++)
-	{
-		cout << *i << ", ";
-	}
-
-	cout << '}' << ln;
+	cout << (x + (x * (y + (z * z)))) / ((x + 3.1416) * (y + 3.1416)) << ln;
 
 	return 0;
 }

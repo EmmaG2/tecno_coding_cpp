@@ -30,26 +30,12 @@ int main()
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 
-	si  set1;
-	vi  numeros;
-	int n;
+	ll y;
+	cin >> y;
 
-	cin >> n;
-
-	while (n-- > 0)
-	{
-		int t;
-		cin >> t;
-		numeros.pb(t);
-	}
-
-	cout << '{' << " ";
-	for (auto i = numeros.begin(); i < numeros.end(); i++)
-	{
-		cout << *i << ", ";
-	}
-
-	cout << '}' << ln;
+	cout << ((y % 4 == 0 && (y % 100 != 0 || y % 400 == 0)) ? "Es bisiesto"
+	                                                        : "No es bisiesto")
+	     << ln;
 
 	return 0;
 }

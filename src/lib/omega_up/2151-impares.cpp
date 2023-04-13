@@ -30,26 +30,22 @@ int main()
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 
-	si  set1;
-	vi  numeros;
-	int n;
-
+	ll n, total_sum = 0;
 	cin >> n;
 
-	while (n-- > 0)
+	for (size_t i = 1; i < n; i++)
 	{
-		int t;
-		cin >> t;
-		numeros.pb(t);
+		if (i % 2 == 1)
+		{
+			total_sum += i % MOD;
+		}
+		else
+		{
+			continue;
+		}
 	}
 
-	cout << '{' << " ";
-	for (auto i = numeros.begin(); i < numeros.end(); i++)
-	{
-		cout << *i << ", ";
-	}
-
-	cout << '}' << ln;
+	cout << total_sum << ln;
 
 	return 0;
 }

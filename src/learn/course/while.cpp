@@ -30,26 +30,22 @@ int main()
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 
-	si  set1;
-	vi  numeros;
-	int n;
+	ll z, n, p = 2, v = 0;
+	cin >> z;
+	n = z;
 
-	cin >> n;
-
-	while (n-- > 0)
+	while (z != 0 && z != 1 && z != -1)
 	{
-		int t;
-		cin >> t;
-		numeros.pb(t);
-	}
+		while (z % p == 0)
+		{
+			v++;
+			z /= p;
+		}
 
-	cout << '{' << " ";
-	for (auto i = numeros.begin(); i < numeros.end(); i++)
-	{
-		cout << *i << ", ";
-	}
+		cout << p << " divide a " << n << ", " << v << " veces" << ln;
 
-	cout << '}' << ln;
+		p++;
+	}
 
 	return 0;
 }

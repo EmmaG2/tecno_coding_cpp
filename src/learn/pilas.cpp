@@ -22,34 +22,65 @@ string to_upper(string a) { for (int i=0;i<(int)a.size();++i) if (a[i]>='a' && a
 string to_lower(string a) { for (int i=0;i<(int)a.size();++i) if (a[i]>='A' && a[i]<='Z') a[i]+='a'-'A'; return a; }
 void yes() { cout<<"YES"; }
 void no() { cout<<"NO"; }
-int main()
-
 /* clang-format on */
 
+ll get_sum(string n)
 {
+	ll total_sum = 0;
+
+	for (char c : n)
+		total_sum += c - '0';
+
+	return total_sum;
+}
+
+int main()
+{
+
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
+	cout.tie(NULL);
 
-	si  set1;
-	vi  numeros;
-	int n;
+	ll        n, n_sum, people = 0;
+	string    n_str;
+	stack<ll> pila;
 
 	cin >> n;
 
-	while (n-- > 0)
+	n_sum = get_sum(to_string(n));
+
+	while (n_sum != 21)
 	{
-		int t;
-		cin >> t;
-		numeros.pb(t);
+		if (n_sum >= 63)
+			n = 0;
+
+		n++;
+		people++;
+
+		n_sum = get_sum(to_string(n));
 	}
 
-	cout << '{' << " ";
-	for (auto i = numeros.begin(); i < numeros.end(); i++)
+	n_str = to_string(n);
+	reverse(n_str.begin(), n_str.end());
+
+	for (char c : n_str)
 	{
-		cout << *i << ", ";
+		int value = c - '0';
+		pila.push(value);
 	}
 
-	cout << '}' << ln;
+	while (pila.size() < 7)
+		pila.push(0);
+
+	cout << people << " ";
+
+	while (!pila.empty())
+	{
+		cout << pila.top();
+		pila.pop();
+	}
+
+	cout << ln;
 
 	return 0;
 }

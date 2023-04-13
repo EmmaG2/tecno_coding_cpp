@@ -1,7 +1,6 @@
-src/lib/2016/*.out
-src/lib/2017/*.out
-src/lib/cses/*.out
-src/learn/*.out
-srr/learn/invert_string
+src/learn/invert_string
+
+*.out
+*.exe
 
 .vscode

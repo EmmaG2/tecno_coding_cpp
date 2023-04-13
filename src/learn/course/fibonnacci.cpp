@@ -30,26 +30,26 @@ int main()
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 
-	si  set1;
-	vi  numeros;
-	int n;
-
+	cout << "FIBONACCI" << ln;
+	ll n, f_n, f_1 = 1, f_2 = 2;
 	cin >> n;
 
-	while (n-- > 0)
-	{
-		int t;
-		cin >> t;
-		numeros.pb(t);
-	}
+	cout << 1 << ln;
 
-	cout << '{' << " ";
-	for (auto i = numeros.begin(); i < numeros.end(); i++)
-	{
-		cout << *i << ", ";
-	}
+	if (n == 1)
+		return 0;
 
-	cout << '}' << ln;
+	cout << "2" << ln;
+
+	if (n == 2)
+		return 0;
+
+	for (size_t i = 3; i <= n; i++)
+	{
+		f_n = (f_1 + f_2) % MOD;
+		f_2 = f_1;
+		f_1 = f_n;
+	}
 
 	return 0;
 }
