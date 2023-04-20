@@ -47,18 +47,6 @@ int main()
 {
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
-
-	// string str;
-
-	// cin >> str;
-
-	// reverse(str.begin(), str.end());
-
-	// for (size_t i = 0; i < str.size(); i++)
-	// {
-	// 	cout << str[i] << ln;
-	// }
-
 	ll     n, suma = 0;
 	string n_str;
 

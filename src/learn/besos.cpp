@@ -15,8 +15,7 @@ int main()
 {
 	long long n, i, k;
 	cin >> n;
-	for (i = n; get_sum(i % MOD) != 21; i++)
-		;
+	for (i = n; get_sum(i % MOD) != 21; i++);
 	k = (i - n + MOD) % MOD;
 	i = i % MOD;
 	cout << k;
