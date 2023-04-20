@@ -1,7 +1,3 @@
-//
-// Created by thisismyemm4 on 16/04/23.
-//
-
 #include <bits/stdc++.h>
 
 // ─╔╗╔╗────────────────╔═══╗─────╔═══╦═╗╔═╗╔═╗
@@ -95,50 +91,23 @@ template<typename T>T mod_inverse(T a, T n = MOD){T x,y,z=0;
 // ----------------------</MATH>--------------------------
 
 /* clang-format on */
-
-int binary_search(int arrn[], int left, int rigth, int obj)
-{
-	if (rigth >= left)
-	{
-		int mid = (left + (rigth - left)) / 2;
-		if (arrn[mid] == obj)
-			return mid;
-		if (arrn[mid] > obj)
-			return binary_search(arrn, left, mid - 1, obj);
-
-		return binary_search(arrn, mid + 1, rigth, obj);
-	}
-
-	return -1;
-}
-
-void solve()
-{
-	int n, m;
-	cin >> n >> m;
-	int arr[n];
-
-	for (int i = 0; i < n; ++i)
-	{
-		cin >> arr[i];
-	}
-
-	sort(arr, arr + n);
-
-	cout << binary_search(arr, 0, n, m) << ln;
-}
-
 int main()
 {
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
-	int t;
-	cin >> t;
 
-	while (t--)
-	{
-		solve();
-	}
+  int n, m, res = 0;
+
+  cin >> n >> m;
+
+  while(n  <= m ){
+    n *= 3;
+    m *= 2;
+    res++;
+  }
+
+  cout << res <<ln;
+
 
 	return 0;
 }

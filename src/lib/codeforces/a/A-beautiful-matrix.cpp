@@ -1,7 +1,3 @@
-//
-// Created by thisismyemm4 on 16/04/23.
-//
-
 #include <bits/stdc++.h>
 
 // ─╔╗╔╗────────────────╔═══╗─────╔═══╦═╗╔═╗╔═╗
@@ -95,50 +91,33 @@ template<typename T>T mod_inverse(T a, T n = MOD){T x,y,z=0;
 // ----------------------</MATH>--------------------------
 
 /* clang-format on */
-
-int binary_search(int arrn[], int left, int rigth, int obj)
-{
-	if (rigth >= left)
-	{
-		int mid = (left + (rigth - left)) / 2;
-		if (arrn[mid] == obj)
-			return mid;
-		if (arrn[mid] > obj)
-			return binary_search(arrn, left, mid - 1, obj);
-
-		return binary_search(arrn, mid + 1, rigth, obj);
-	}
-
-	return -1;
-}
-
-void solve()
-{
-	int n, m;
-	cin >> n >> m;
-	int arr[n];
-
-	for (int i = 0; i < n; ++i)
-	{
-		cin >> arr[i];
-	}
-
-	sort(arr, arr + n);
-
-	cout << binary_search(arr, 0, n, m) << ln;
-}
-
 int main()
 {
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
-	int t;
-	cin >> t;
+  int mtx[5][5];
+  int i1, j2;
 
-	while (t--)
-	{
-		solve();
-	}
+  for (int i = 0; i < 5; i++)
+  {
+    for (int j = 0; j < 5; j++)
+    {
+      cin >> mtx[i][j];
+    }
+  }
+
+  for (int i = 0; i < 5; i++)
+  {
+    for (int j = 0; j < 5; j++)
+    {
+       if(mtx[i][j] == 1) {
+        i1 = i;
+        j2 = j;
+       }
+    }
+  }
+
+  cout << abs(2 - i1) + abs(2 - j2) << ln;
 
 	return 0;
 }
