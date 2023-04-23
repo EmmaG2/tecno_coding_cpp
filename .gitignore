@@ -4,3 +4,5 @@ src/learn/invert_string
 *.exe
 
 .vscode
+ruby
+ruby/*
