@@ -5,6 +5,8 @@
 
 using namespace std;
 
+const int mod = 10e9 + 7;
+
 int main(int argc, char const *argv[])
 {
 	ios::sync_with_stdio(NULL);
