@@ -12,11 +12,11 @@ void solve()
   int v, c;
 
   cin >> v >> c;
-  int adj_mtr[200][200];
+  int adj_mtr[v][c];
 
-  for (int i = 0; i < 200; i++)
+  for (int i = 0; i < v; i++)
   {
-    for (int j = 0; j < 200; j++)
+    for (int j = 0; j < c; j++)
     {
       adj_mtr[i][j] = INF;
     }
