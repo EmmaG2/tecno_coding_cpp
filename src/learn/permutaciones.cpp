@@ -97,30 +97,30 @@ template<typename T>T mod_inverse(T a, T n = MOD){T x,y,z=0;
 
 int main()
 {
-	ios_base::sync_with_stdio(false);
-	cin.tie(NULL);
-	int n;
-	cin >> n;
-	int arr[n];
+  ios_base::sync_with_stdio(false);
+  cin.tie(NULL);
+  int n;
+  cin >> n;
+  int arr[n];
 
-	for (int i = 1; i <= n; ++i)
-	{
-		cin >> arr[i];
-	}
+  for (int i = 1; i <= n; ++i)
+  {
+    cin >> arr[i];
+  }
 
-	do
-	{
-		for (int i = 1; i <= n; ++i)
-		{
-			cout << arr[i] << ' ';
-		}
+  do
+  {
+    for (int i = 1; i <= n; ++i)
+    {
+      cout << arr[i] << ' ';
+    }
 
-		cout << ln;
-	} while (next_permutation(arr + 1, arr + n + 1));
+    cout << ln;
+  } while (next_permutation(arr + 1, arr + n + 1));
 
-	cout << ln;
+  cout << ln;
 
-	return 0;
+  return 0;
 }
 
 // Emmanuel Granados
