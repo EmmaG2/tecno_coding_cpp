@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <cstddef>
 using namespace std;
 /* clang-format off */
 #define ln "\n"
@@ -18,48 +19,48 @@ using namespace std;
 
 ll algebra(ll n, ll m)
 {
-	ll pow = 1;
+  ll pow = 1;
 
-	for (size_t i = 0; i < m; i++)
-	{
-		pow = (pow * n) % MOD;
-	}
+  for (size_t i = 0; i < m; i++)
+  {
+    pow = (pow * n) % MOD;
+  }
 
-	if (m == 0)
-		return 1;
+  if (m == 0)
+    return 1;
 
-	return pow % MOD;
+  return pow % MOD;
 }
 
 int main()
 {
-	ios_base::sync_with_stdio(false);
-	cin.tie(NULL);
+  ios_base::sync_with_stdio(false);
+  cin.tie(NULL);
 
-	ll  exp_2, suma;
-	int t, m, n;
+  ll  exp_2, suma;
+  int t, m, n;
 
-	cin >> t;
+  cin >> t;
 
-	while (t--)
-	{
-		cin >> m >> n;
-		exp_2 = 1;
+  while (t--)
+  {
+    cin >> m >> n;
+    exp_2 = 1;
 
-		for (int i = 1; i <= m; i++)
-		{
-			exp_2 *= 2;
-		}
+    for (int i = 1; i <= m; i++)
+    {
+      exp_2 *= 2;
+    }
 
-		suma = exp_2;
+    suma = exp_2;
 
-		for (int i = m + 1; i <= n; i++)
-		{
-			exp_2 *= 2;
-			suma += exp_2;
-		}
-		cout << suma << ln;
-	}
+    for (int i = m + 1; i <= n; i++)
+    {
+      exp_2 *= 2;
+      suma += exp_2;
+    }
+    cout << suma << ln;
+  }
 
-	return 0;
+  return 0;
 }

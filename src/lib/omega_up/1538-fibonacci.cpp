@@ -27,22 +27,22 @@ void no() { cout<<"NO"; }
 
 int main()
 {
-	ios_base::sync_with_stdio(false);
-	cin.tie(NULL);
+  ios_base::sync_with_stdio(false);
+  cin.tie(NULL);
 
-	int n, i = 0;
-	cin >> n;
+  int n, i = 0;
+  cin >> n;
 
-	for (int f2 = 1, f1 = 2, fn; f1 <= n; f2 = f1, f1 = fn)
-	{
-		fn = f1 + f2;
-		for (int i = f1 + 1; i < fn && i < n; i++)
-		{
-			cout << i << " ";
-		}
-	}
+  for (int f2 = 1, f1 = 2, fn; f1 <= n; f2 = f1, f1 = fn)
+  {
+    fn = f1 + f2;
+    for (int i = f1 + 1; i < fn && i < n; i++)
+    {
+      cout << i << " ";
+    }
+  }
 
-	cout << ln;
+  cout << ln;
 
-	return 0;
+  return 0;
 }

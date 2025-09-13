@@ -4,13 +4,13 @@ using namespace std;
 
 int main()
 {
-	ios_base::sync_with_stdio(false);
-	cin.tie(NULL);
+  ios_base::sync_with_stdio(false);
+  cin.tie(NULL);
 
-	int n;
-	cin >> n;
+  int n;
+  cin >> n;
 
-	cout << n << "\n";
+  cout << n << "\n";
 
-	return 0;
+  return 0;
 }
