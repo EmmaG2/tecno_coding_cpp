@@ -1,0 +1,8 @@
+src/learn/invert_string
+
+*.out
+*.exe
+
+.vscode
+ruby
+ruby/*
