@@ -1,8 +1,17 @@
-src/learn/invert_string
-
 *.out
 *.exe
 
 .vscode
 ruby
 ruby/*
+.idea
+
+# Ignorar binarios y archivos compilados
+*.out
+*.o
+*.exe
+
+# Ignorar directorios de build
+/build/
+/bin/
+/obj/
